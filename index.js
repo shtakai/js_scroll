@@ -6,7 +6,11 @@ var words = ["fun", "exciting", "about not giving up", "being helpful", "being o
 
 function updateText()
 {
-  el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
+  nextWord = words[word_counter][character_counter++]
+  if(nextWord==' '){
+    nextWord = '&nbsp;';
+  }
+  el.innerHTML = el.innerHTML+nextWord;
 
   if(character_counter == words[word_counter].length + 1)
   {
@@ -20,5 +24,5 @@ function updateText()
   }
 }
 
-setInterval(updateText,1000);
+setInterval(updateText,300);
 
