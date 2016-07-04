@@ -8,7 +8,7 @@ function updateText()
 {
   el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
 
-  if(character_counter == words[word_counter].length)
+  if(character_counter == words[word_counter].length + 1)
   {
     word_counter++; 	//choose a different word
     character_counter = 0;	//start over with the first character of the word
@@ -20,5 +20,5 @@ function updateText()
   }
 }
 
-setInterval(updateText,300);
+setInterval(updateText,1000);
 
